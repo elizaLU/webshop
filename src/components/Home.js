@@ -6,7 +6,6 @@ import ProductContainer from "./ProductContainer";
 export class Home extends Component {
   state = {};
   componentDidMount() {
-    //console.log("state from albumListContainer: ", this.state)
     this.props.getProducts();
   }
 

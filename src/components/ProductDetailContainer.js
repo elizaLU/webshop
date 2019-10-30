@@ -1,15 +1,24 @@
-import React, {Component } from "react";
-//import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import { connect } from "react-redux";
+import ProductDetail from "./ProductDetail";
 
 class ProductDetailContainer extends Component {
+  componentDidMount() {
+    //const productId = this.props.match.params.id;
+    //TODO!!!!!!!!!!!! this.props.getProduct(productId);
+  }
+
   render() {
-    return (
-      <div className="productDetails">
-        <p>jdhfdjhfd</p>
-      </div>
-    );
+    const products = this.props.products;
+    console.log("???", products);
+    return <ProductDetail products={products} />;
   }
 }
 
-export default connect(null)(ProductDetailContainer);
+const mapStateToProps = state => {
+  return {
+    products: state.products
+  };
+};
+
+export default connect(mapStateToProps)(ProductDetailContainer);
