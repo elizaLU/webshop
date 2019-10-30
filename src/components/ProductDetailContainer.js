@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {Component } from "react";
+//import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-class ProductDetailContainer {
+class ProductDetailContainer extends Component {
   render() {
     return (
       <div className="productDetails">
