@@ -1,3 +1,10 @@
+Displaying products to the user in various ways
+Users can add products to their cart or remove products from their cart
+Users can go to a checkout page that shows their total
+Users can finalize their order by filling out a form with their personal information
+Users can search the webshop for a specific product
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
