@@ -6,7 +6,12 @@ export default function ProductList(props) {
       <h1>Product list</h1>
       <ul>
         {props.products.map(product => (
-          <img height="400px" key={product.id} src={product.imageUrl}></img>
+          <img
+            height="200px"
+            key={product.id}
+            src={product.imageUrl}
+            alt="productImage"
+          ></img>
         ))}
       </ul>
     </div>
