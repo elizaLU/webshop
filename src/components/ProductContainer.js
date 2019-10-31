@@ -1,26 +1,27 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
 
 export default function ProductList(props) {
   return (
-    <div>
-      <h1>Product list</h1>
-      <ul>
+    <Container>
+      <div id="product">
         {props.products.map(product => (
-          <div>
+          <div id="productBox">
             <Link to={`/products/${product.id}`}>
               <img
+                id="productImage"
                 height="200px"
                 key={product.id}
                 src={product.imageUrl}
-                alt="productImage">
-              </img>
+                alt="productImage"
+              ></img>
             </Link>
+            <br />
             {product.name}
           </div>
-        )
-        )}
-      </ul>
-    </div>
+        ))}
+      </div>
+    </Container>
   );
 }

@@ -13,12 +13,13 @@ class ProductDetailContainer extends Component {
     this.props.getProduct(id);
   }
 
-
   render() {
+
     return <ProductDetail
       singleProduct={this.props.singleProduct}
       addProduct={this.props.addProduct}
     />;
+
   }
 }
 
