@@ -8,7 +8,7 @@ export function setProducts(products) {
 }
 
 export function getProducts() {
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
     const state_products = getState().products;
     if (state_products.length === 0) {
       fetch("http://localhost:4000/products")
@@ -19,3 +19,18 @@ export function getProducts() {
     }
   };
 }
+
+
+export const ADD_PRODUCT = "ADD_PRODUCT"
+
+export function addProduct(product) {
+  return {
+    type: "ADD_PRODUCT",
+    payload: product
+  }
+}
+
+
+
+
+
