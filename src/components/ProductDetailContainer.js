@@ -4,9 +4,8 @@ import ProductDetail from "./ProductDetail";
 import { getProduct } from "../actions/singleProduct";
 import { addProduct } from "../actions/addProduct"
 
-
 class ProductDetailContainer extends Component {
-  state = {}
+  state = {};
 
   componentDidMount() {
     const id = this.props.match.params.id;
@@ -14,27 +13,27 @@ class ProductDetailContainer extends Component {
   }
 
   render() {
-
-    return <ProductDetail
-      singleProduct={this.props.singleProduct}
-      addProduct={this.props.addProduct}
-    />;
-
+    return (
+      <ProductDetail
+        singleProduct={this.props.singleProduct}
+        addProduct={this.props.addProduct}
+      />
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    singleProduct: state.singleProduct,
+    singleProduct: state.singleProduct
   };
 };
 
 const mapActionToProps = {
   getProduct,
   addProduct
-}
+};
 
 export default connect(
   mapStateToProps,
-  mapActionToProps,
+  mapActionToProps
 )(ProductDetailContainer);
