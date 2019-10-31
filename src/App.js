@@ -5,12 +5,13 @@ import store from "./store";
 import { Provider } from "react-redux";
 import { Route } from "react-router-dom";
 import ProductDetailContainer from "./components/ProductDetailContainer";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Webshop</h1>
+        <NavBar />
         <Route exact path="/" component={Home} />
         <Route exact path="/products/:id" component={ProductDetailContainer} />
       </div>

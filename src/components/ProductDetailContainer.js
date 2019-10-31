@@ -11,17 +11,18 @@ class ProductDetailContainer extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    //console.log("ID", id);
+
     this.props.getProduct(id);
     //this.props.addProduct(addedProduct)
   }
 
-
   render() {
+
     return <ProductDetail
       singleProduct={this.props.singleProduct}
       addProduct={this.props.addProduct}
     />;
+
   }
 }
 
