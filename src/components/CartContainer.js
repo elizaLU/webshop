@@ -7,13 +7,13 @@ export class CartContainer extends Component {
   state = []
 
   render() {
-    if (this.props.addToCart.length === 0 ) {
+    if (this.props.addProduct.length === 0) {
       return <p>You have no items in your cart</p>
     } else {
       return (
         <div>
           <h1>Your cart</h1>
-          <CartItems addToCart={this.props.addToCart} />
+          <CartItems addProduct={this.props.addProduct} />
         </div>)
     }
   }
@@ -21,7 +21,7 @@ export class CartContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    addToCart: state.addToCart
+    addProduct: state.addProduct
   }
 }
 
