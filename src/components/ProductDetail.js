@@ -17,8 +17,11 @@ export default function ProductDetail(props) {
         alt={singleProduct.names}
       ></img>
       <br />
+      <br />
       <button onClick={() => addProduct(singleProduct)}>ADD TO CART</button>
-      <Link to="/cart">Go to cart</Link>;
+      <br />
+      <br />
+      <Link to="/cart"> <button>GO TO CART</button></Link>
     </div>
   );
 }
