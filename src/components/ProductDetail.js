@@ -7,7 +7,7 @@ export default function ProductDetail(props) {
       <h1>{singleProduct.name}</h1>
 
       <p>
-        <i>{singleProduct.price}</i>
+        <i>Price: €{singleProduct.price}</i>
       </p>
 
       <img height="400px" src={singleProduct.imageUrl}></img>
