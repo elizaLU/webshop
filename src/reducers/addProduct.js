@@ -6,3 +6,7 @@ const addedProduct = (state = [], action = {}) => {
       return state
   }
 }
+
+
+
+export default addedProduct
