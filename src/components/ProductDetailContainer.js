@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProductDetail from "./ProductDetail";
 import { getProduct } from "../actions/singleProduct";
-import { addProduct } from "../actions/products"
-//import { selectProduct } from "../actions/products"
+import { addProduct } from "../actions/addProduct"
 
 
 class ProductDetailContainer extends Component {
@@ -11,9 +10,7 @@ class ProductDetailContainer extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-
     this.props.getProduct(id);
-    //this.props.addProduct(addedProduct)
   }
 
   render() {
