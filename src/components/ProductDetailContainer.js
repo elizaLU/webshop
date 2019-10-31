@@ -1,24 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProductDetail from "./ProductDetail";
+import { getProduct } from "../actions/singleProduct";
 
 class ProductDetailContainer extends Component {
   componentDidMount() {
-    //const productId = this.props.match.params.id;
-    //TODO!!!!!!!!!!!! this.props.getProduct(productId);
+    const id = this.props.match.params.id;
+    console.log("ID", id);
+    this.props.getProduct(id);
   }
 
   render() {
-    const products = this.props.products;
-    console.log("???", products);
-    return <ProductDetail products={products} />;
+    const singleProduct = this.props.singleProduct;
+    console.log("???", singleProduct);
+    return <ProductDetail singleProduct={singleProduct} />;
   }
 }
 
 const mapStateToProps = state => {
   return {
-    products: state.products
+    singleProduct: state.singleProduct
   };
 };
 
-export default connect(mapStateToProps)(ProductDetailContainer);
+export default connect(
+  mapStateToProps,
+  { getProduct }
+)(ProductDetailContainer);

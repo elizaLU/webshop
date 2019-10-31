@@ -1,16 +1,16 @@
 import React from "react";
 
 export default function ProductDetail(props) {
-  const products = props.products;
+  const singleProduct = props.singleProduct;
   return (
     <div>
-      <h1>{products.name}</h1>
+      <h1>{singleProduct.name}</h1>
 
       <p>
-        <i>{products.price}</i>
+        <i>{singleProduct.price}</i>
       </p>
 
-      <img height="400px" src={products.imageUrl}></img>
+      <img height="400px" src={singleProduct.imageUrl}></img>
     </div>
   );
 }
