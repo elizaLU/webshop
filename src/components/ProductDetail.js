@@ -4,9 +4,7 @@ import React from "react";
 export default function ProductDetail(props) {
   const singleProduct = props.singleProduct;
   const addProduct = props.addProduct;
-  console.log("what's the selectProduct ", addProduct)
-
-
+ 
   return (
     <div>
       <h1>{singleProduct.name}</h1>
