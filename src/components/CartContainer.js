@@ -4,7 +4,7 @@ import CartItems from './CartItems'
 
 
 export class CartContainer extends Component {
-  state = []
+  state = {}
 
   render() {
     if (this.props.addProduct.length === 0) {
@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapActionToProps = {
+
 }
 
 export default connect(mapStateToProps, mapActionToProps)(CartContainer)

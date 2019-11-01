@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 export default function ProductList(props) {
+  console.log('props test:', props)
   return (
     <Container>
       <div id="product">
@@ -17,6 +18,11 @@ export default function ProductList(props) {
                 alt="productImage"
               ></img>
             </Link>
+            <br />
+            <button onClick={() => {
+              console.log('onClick test:', product)
+              props.addProduct(product)
+            }}>+</button>
             <br />
             {product.name}
           </div>
