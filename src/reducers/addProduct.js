@@ -1,12 +1,10 @@
-const addedProduct = (state = [], action = {}) => {
+const addProduct = (state = [], action = {}) => {
   switch (action.type) {
     case "ADD_PRODUCT":
-      return [...state, { ...action.payload }]
+      return [...state, { ...action.payload }];
     default:
-      return state
+      return state;
   }
-}
+};
 
-
-
-export default addedProduct
+export default addProduct;

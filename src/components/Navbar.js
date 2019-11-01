@@ -8,17 +8,24 @@ import {
   NavDropdown,
   Nav
 } from "react-bootstrap";
+import SearchBar from "./SearchBar";
 
 export default class NavBar extends Component {
   render() {
     return (
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">The Nourishing Goddess</Navbar.Brand>
+        <Link id="PageTitle" to="/">
+          The Nourishing Goddess
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Link to="/cart">Cart</Link>
+            <Link id="link1" to="/">
+              Home
+            </Link>
+            <Link id="link2" to="/cart">
+              Cart
+            </Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -32,7 +39,7 @@ export default class NavBar extends Component {
             </NavDropdown>
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <SearchBar />
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>

@@ -21,6 +21,33 @@
   color: #09d3ac;
 }
 
+#PageTitle {
+  color: black;
+  font-size: 25px;
+}
+
+#link1 {
+  color: gray;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 10px;
+}
+
+#link2 {
+  color: gray;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 10px;
+}
+
 #product {
   display: flex;
   width: 100%;

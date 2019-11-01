@@ -5,9 +5,8 @@ import store from "./store";
 import { Provider } from "react-redux";
 import { Route } from "react-router-dom";
 import ProductDetailContainer from "./components/ProductDetailContainer";
-import CartContainer from "./components/CartContainer"
+import CartContainer from "./components/CartContainer";
 import NavBar from "./components/Navbar";
-
 
 function App() {
   return (
