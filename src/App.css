@@ -47,6 +47,33 @@
   transform: scale(1.07);
 }
 
+#PageTitle {
+  color: black;
+  font-size: 25px;
+}
+
+#link1 {
+  color: gray;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 10px;
+}
+
+#link2 {
+  color: gray;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 10px;
+}
+
 #nav {
   width: 100%;
   float: left;
