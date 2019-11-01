@@ -22,7 +22,7 @@ export default function ProductList(props) {
             <button onClick={() => {
               console.log('onClick test:', product)
               props.addProduct(product)
-            }}>+</button>
+            }}>add to cart</button>
             <br />
             {product.name}
           </div>
