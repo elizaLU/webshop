@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getProducts } from "../actions/products";
-import ProductContainer from "./ProductContainer";
+import { addProduct } from "../actions/addProduct"
+import ProductContainer from "./ProductList";
 
 export class Home extends Component {
   state = {};
@@ -12,7 +13,8 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <ProductContainer products={this.props.products} />
+        <ProductContainer products={this.props.products} 
+        addProduct={this.props.addProduct} />
       </div>
     );
   }
@@ -20,11 +22,12 @@ export class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    products: state.products
+    products: state.products,
+    addProduct: state.addProduct
   };
 };
 
 export default connect(
   mapStateToProps,
-  { getProducts }
+  { getProducts, addProduct }
 )(Home);

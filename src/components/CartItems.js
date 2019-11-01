@@ -5,14 +5,15 @@ export default function CartItems(props) {
   console.log("add product ", props.addProduct)
   return (
     <div>
-      {/* <h3>You added the following items to your cart: </h3> */}
-      <ul>
+      <h4>You have the following items to your cart:</h4>
+      <div>
         {props.addProduct.map(addProduct =>
-          <li key={addProduct.id}>
+          <span key={addProduct.id}> 
             <Link to={`/products/${addProduct.id}`}>{addProduct.name}</Link>
-          </li>
+            <br />Price: {addProduct.price}
+          </span>
         )}
-      </ul>
+      </div>
 
     </div>
   )
