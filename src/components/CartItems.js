@@ -2,18 +2,26 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 export default function CartItems(props) {
-  console.log("add product ", props.addProduct)
+  console.log("Hello product ", props.addProduct)
+  const totalPrice = props.addProduct
+    .reduce((acc, currVal) => { return acc + parseInt(currVal.price) }, 0)
+
+
   return (
     <div>
-      {/* <h3>You added the following items to your cart: </h3> */}
-      <ul>
+      <h4>You have {props.addProduct.length} items to your cart:</h4>
+      <div>
         {props.addProduct.map(addProduct =>
-          <li key={addProduct.id}>
+          <span key={addProduct.id}>
             <Link to={`/products/${addProduct.id}`}>{addProduct.name}</Link>
-          </li>
+            <br />Price: {addProduct.price}
+            <br />
+          </span>
         )}
-      </ul>
-
+      </div>
+      <p>Total price: {totalPrice}</p>
+      <br />
+      <button onClick={props.clearCart}>CLEAR CART</button>
     </div>
   )
 }
